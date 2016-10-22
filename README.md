@@ -38,6 +38,7 @@ Here is what an example podcast RSS feed would look like:
           <listen:play>http://fans.fm/listen/22p/play</listen:play>
           <listen:pause>http://fans.fm/listen/22p/pause</listen:pause>
           <listen:seek>http://fans.fm/listen/22p/seek</listen:seek>
+          <listen:finish>http://fans.fm/listen/22p/seek</listen:finish>
           <itunes:duration>09:23</itunes:duration>
           <itunes:author>Kyle Shank</itunes:author>
           <itunes:subtitle>FANS.FM is a podcasting platform that lets you ...</itunes:subtitle>
