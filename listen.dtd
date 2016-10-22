@@ -1,0 +1,3 @@
+<!ELEMENT play (#PCDATA)>
+<!ELEMENT pause (#PCDATA)>
+<!ELEMENT seek (#PCDATA)>
