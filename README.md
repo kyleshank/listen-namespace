@@ -4,7 +4,7 @@ A simple RSS namespace extensions for podcast feeds.
 
 The goal is to create a spec that would behave like a trackback for audio listening behavior.  Podcast clients and apps that implement the namespace will allow podcast hosts to track user engagement in a detailed way.
 
-The way the namespace works is pretty straightforward.  There are 3 new elements you can add to *item* tags in your feed: *play*, *pause* and *seek*.  Each element will contain a callback url that will get triggered when the user plays an episode, pauses an episode or seeks within an episode.
+The way the namespace works is pretty straightforward.  There are 4 new elements you can add to **item** tags in your feed: **play**, **pause**, **seek** and **finish**.  Each element will contain a callback url that will get triggered when the user plays an episode, pauses an episode, seeks within an episode and finishes listening to an episode.
 
 Here is what an example podcast RSS feed would look like:
 
