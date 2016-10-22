@@ -8,7 +8,7 @@ The way the namespace works is pretty straightforward.  There are 3 new elements
 
 Here is what an example *item* would look like:
 
-      <item>
+    <item>
       <title>1.0 - Welcome to FANS.FM!</title>
       <description>FANS.FM is a podcasting platform that lets you start a podcast for free, get deep analytics about your audience and earn revenue with a member subscription system for premium content.</description>
       <pubDate>Tue, 13 Sep 2016 01:32:26 +0000</pubDate>
