@@ -24,4 +24,4 @@ Here is what an example *item* would look like:
       <itunes:summary>FANS.FM is a podcasting platform that lets you start a podcast for free, get deep analytics about your audience and earn revenue with a member subscription system for premium content.</itunes:summary>
       <itunes:image href="https://s3.amazonaws.com/fansfm_production/db083380-24e5-0134-7874-0f16ad195fd9.jpg"/>
       <itunes:explicit>no</itunes:explicit>
-    </item>```
+    </item>
