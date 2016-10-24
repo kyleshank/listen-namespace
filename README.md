@@ -62,7 +62,7 @@ An item MUST NOT contain more than one finish element.
 
 ## 8. License
 
-Copyright 2016 Kyle Shank. Redistribution and reuse of this document is permitted under the terms of the Creative Commons Attribution-ShareAlike 3.0 license.
+Copyright 2016 Kyle Shank. Redistribution and reuse of this document is permitted under the terms of the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## 9. Credits
 
