@@ -56,7 +56,7 @@ The finish element, when present in an [item](http://www.rssboard.org/rss-specif
 
 An RSS 2.0 feed MUST define the URL as the element's value.
 
-    <liste:finish>http://example.podcast.com/episode/100/play</listen:finish>
+    <liste:finish>http://example.podcast.com/episode/100/finish</listen:finish>
 
 An item MUST NOT contain more than one finish element.
 
