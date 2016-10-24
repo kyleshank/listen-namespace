@@ -8,6 +8,10 @@ The goal is to create a spec that would behave like a trackback for audio listen
 
 The way the namespace works is pretty straightforward.  There are 4 new elements you can add to **item** tags in your feed: **play**, **pause**, **seek** and **finish**.  Each element will contain a callback url that will get triggered when the user plays an episode, pauses an episode, seeks within an episode and finishes listening to an episode.
 
+In order to work, both the sender and the receiver must support the listen namespace protocol.
+
+The listen namespace events must be sent to a listen URL, a script that understands trackback and can do something useful with the information. The listen URL identifies the page that's being linked on the sender's site.
+
 ## 2. Conventions
 
 In this documentation, the key words MAY, MUST, MUST NOT, OPTIONAL, RECOMMENDED, REQUIRED, SHALL, SHALL NOT, SHOULD and SHOULD NOT are to be interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
@@ -56,19 +60,37 @@ The finish element, when present in an [item](http://www.rssboard.org/rss-specif
 
 An RSS 2.0 feed MUST define the URL as the element's value.
 
-    <liste:finish>http://example.podcast.com/episode/100/finish</listen:finish>
+    <listen:finish>http://example.podcast.com/episode/100/finish</listen:finish>
 
 An item MUST NOT contain more than one finish element.
 
-## 8. License
+## 8. Client Implementation
+
+Clients SHOULD parse listen namespace play, pause, seek and finish elements for callback URLs.
+
+Clients SHOULD make POST requests to callback URLs.
+
+Clients SHOULD pass a POST parameter to play, pause, seek and finish callback URLs named "seconds" with the current number of total seconds at the play head of the audio player.
+
+Clients SHOULD also pass a POST parameter to the pause callback URL named "duration" with the number of seconds in the session since the play event.
+
+Clients SHOULD make a POST request to the listen:play URL when the audio player starts playback of the audio file for the given item.
+
+Clients SHOULD make a POST request to the listen:pause URL when the audio player pauses playback of the audio file for the given item.
+
+Clients SHOULD make a POST request to the listen:seek URL when the audio player seeks to a new position within the audio file for the given item.
+
+Clients SHOULD make a POST request to the listen:finish URL when the audio player finishes playback of the audio file for the given item.
+
+## 9. License
 
 Copyright 2016 Kyle Shank. Redistribution and reuse of this document is permitted under the terms of the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-## 9. Credits
+## 10. Credits
 
 The Listen namespace for RSS was created by Kyle Shank.
 
-## 10. Example
+## 11. Example
 
 Here is what an example podcast RSS feed would look like:
 
